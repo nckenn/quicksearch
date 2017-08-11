@@ -317,17 +317,18 @@
 		
 		return this.each(function () {
 			$(this).on(options.bind, function () {
-				if(options.keyCode){
+				if (options.keyCode) {
 				    var keycode = (e.keyCode ? e.keyCode : e.which);
-				    if(keycode === options.keyCode){
+				    if (keycode === options.keyCode) {
 					val = $(this).val();
 					self.trigger();
 				    }
-				}else{
+				} else {
 				    val = $(this).val();
 				    self.trigger();
 				}
 			});
+			
 			$(this).on(options.resetBind, function () {
 				val = '';
 				self.reset();
